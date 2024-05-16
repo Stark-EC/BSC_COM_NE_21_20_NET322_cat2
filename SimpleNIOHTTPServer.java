@@ -97,7 +97,8 @@ class SimpleNIOHTTPServer implements HTTPServerHandler {
 
     private void serveResource(SocketChannel clientChannel, String resourcePath) throws IOException {
         if (resourcePath.equals("/") || resourcePath.isEmpty()) {
-            resourcePath = "/index.html"; // serve index.html for root path
+            resourcePath = "/index.html"; 
+            // serve index.html for root path
         }
 
         Path filePath = templatesPath.resolve(resourcePath.substring(1));
